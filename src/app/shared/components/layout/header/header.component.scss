@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .navbar-brand {
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #000;
+      }
+
+      &.active {
+        color: #0066cc;
+        border-bottom: 2px solid #0066cc;
+      }
+    }
+
+    .auth-section {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 1px solid #eee;
+    }
+  }
+}
