@@ -1,0 +1,129 @@
+button {
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  // Size variations
+  &.small {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  &.medium {
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  &.large {
+    padding: 1rem 2.25rem;
+    font-size: 1.125rem;
+  }
+
+  // Type variations
+  &.primary {
+    background-color: var(--natural-5);
+    color: var(--earth-0);
+    border-color: var(--natural-6);
+
+    &:hover:not(:disabled) {
+      background-color: var(--natural-6);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--earth-0);
+    color: var(--natural-7);
+    border-color: var(--earth-2);
+
+    &:hover:not(:disabled) {
+      background-color: var(--earth-1);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &.success {
+    background-color: var(--twilight-1);
+    color: var(--sky-0);
+    border-color: var(--twilight-2);
+
+    &:hover:not(:disabled) {
+      background-color: var(--twilight-2);
+    }
+  }
+
+  &.warning {
+    background-color: var(--accent-2);
+    color: var(--natural-7);
+    border-color: var(--signal-1);
+
+    &:hover:not(:disabled) {
+      background-color: var(--signal-1);
+      color: var(--natural-7);
+    }
+  }
+
+  &.error {
+    background-color: var(--blossom-3);
+    color: var(--earth-0);
+    border-color: var(--accent-1);
+
+    &:hover:not(:disabled) {
+      background-color: var(--accent-1);
+    }
+  }
+
+  &.info {
+    background-color: var(--sky-3);
+    color: var(--natural-7);
+    border-color: var(--twilight-3);
+
+    &:hover:not(:disabled) {
+      background-color: var(--signal-3);
+      color: var(--earth-0);
+    }
+  }
+
+  // Outline variant
+  &.outline {
+    background-color: transparent;
+    border-width: 1px;
+
+    &.primary {
+      color: var(--natural-5);
+      border-color: currentColor;
+
+      &:hover:not(:disabled) {
+        background-color: var(--natural-5);
+        color: var(--earth-0);
+      }
+    }
+
+    // Add other outline variants similarly
+  }
+}

@@ -1,0 +1,29 @@
+// app.component.scss
+:host {
+  --bright-blue: oklch(51.01% 0.274 263.83);
+  --electric-violet: oklch(53.18% 0.28 296.97);
+  // ... keep your other variables
+
+  display: block;
+  height: 100%;
+}
+
+app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+router-outlet {
+  display: block;
+  padding-top: 60px;
+
+}
+
+main {
+  padding-top: 60px;
+  min-height: calc(100vh - 60px);
+}

@@ -1,0 +1,64 @@
+// app/styles/design-system/_variables.scss
+:root {
+  /* Health-Centric Color System */
+  --color-primary-100: var(--natural-0);
+  --color-primary-500: var(--natural-3);
+  --color-primary-900: var(--natural-7);
+
+  /* Semantic Colors */
+  --color-success: var(--natural-4);
+  --color-warning: var(--signal-1);
+  --color-error: var(--signal-2);
+  --color-info: var(--signal-3);
+
+  /* Surface Colors */
+  --color-surface-1: var(--stone-0);
+  --color-surface-2: var(--stone-1);
+  --color-surface-3: var(--stone-2);
+
+  /* Typography */
+  --text-primary: var(--natural-7);
+  --text-secondary: var(--stone-3);
+}
+
+:root {
+  --natural-0: #e5d9b6;
+  --natural-1: #c1d392;
+  --natural-2: #a4be7b;
+  --natural-3: #7ba05d;
+  --natural-4: #5f8d4e;
+  --natural-5: #487545;
+  --natural-6: #285430;
+  --natural-7: #1a3d27;
+
+  --earth-0: #f5f0e1;
+  --earth-1: #d4c8a9;
+  --earth-2: #b8a47e;
+  --earth-3: #8c7c5e;
+
+  --accent-1: #c7472f;
+  --accent-2: #e9b44c;
+  --accent-3: #6b9080;
+
+  --sky-0: #f3f7f0;
+  --sky-1: #dde5d8;
+  --sky-2: #b7c9b5;
+  --sky-3: #8fa899;
+
+  --blossom-1: #e8c8c3;
+  --blossom-2: #d4a79e;
+  --blossom-3: #b37062;
+
+  --stone-0: #f8f5f0;
+  --stone-1: #e3ddd3;
+  --stone-2: #c4bcae;
+  --stone-3: #9a9287;
+
+  --twilight-1: #6b9080;
+  --twilight-2: #4a7668;
+  --twilight-3: #345e54;
+
+  --signal-1: #dba53d;
+  --signal-2: #9e2b26;
+  --signal-3: #3c6e71;
+}
