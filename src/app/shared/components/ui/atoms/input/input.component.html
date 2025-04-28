@@ -1,0 +1,19 @@
+<div
+  class="input-container"
+  [class.has-error]="error"
+  [class.has-success]="success"
+>
+  <label *ngIf="label" [class.required]="required">{{ label }}</label>
+  <input
+    [type]="type"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    [value]="value"
+    (input)="onInput($event)"
+  />
+  <div class="hint" *ngIf="error || success || info">
+    <span class="error" *ngIf="error">{{ error }}</span>
+    <span class="success" *ngIf="success">{{ success }}</span>
+    <span class="info" *ngIf="info">{{ info }}</span>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  width: 100%;
+
+  label {
+    font-size: 0.875rem;
+    color: var(--natural-7);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+
+    &.required::after {
+      content: ' *';
+      color: var(--blossom-3);
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border: 1px solid var(--earth-2);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--earth-0);
+    color: var(--natural-7);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+
+    &:focus {
+      outline: none;
+      border-color: var(--natural-4);
+      box-shadow: 0 0 0 3px rgba(95, 141, 78, 0.15),
+        inset 0 1px 2px rgba(0, 0, 0, 0.05);
+      background-color: var(--sky-0);
+    }
+
+    &:hover:not(:disabled, :focus) {
+      border-color: var(--twilight-2);
+    }
+
+    &:disabled {
+      background-color: var(--stone-1);
+      color: var(--stone-3);
+      cursor: not-allowed;
+    }
+
+    &::placeholder {
+      color: var(--stone-3);
+      font-weight: 400;
+      opacity: 0.7;
+    }
+  }
+
+  .hint {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+
+    .error {
+      color: var(--blossom-3);
+    }
+
+    .success {
+      color: var(--twilight-2);
+    }
+
+    .info {
+      color: var(--sky-3);
+    }
+  }
+
+  &.has-error {
+    label {
+      color: var(--blossom-3);
+    }
+
+    input {
+      border-color: var(--blossom-3);
+      background-color: rgba(183, 112, 98, 0.05);
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(183, 112, 98, 0.15);
+      }
+    }
+  }
+
+  &.has-success {
+    label {
+      color: var(--twilight-2);
+    }
+
+    input {
+      border-color: var(--twilight-2);
+      background-color: rgba(107, 144, 128, 0.05);
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(107, 144, 128, 0.15);
+      }
+    }
+  }
+
+  // Optional: Add a subtle focus transition for the label when input is focused
+  &:focus-within label {
+    color: var(--natural-6);
+  }
+}
