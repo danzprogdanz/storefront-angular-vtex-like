@@ -3,7 +3,7 @@
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(var(--natural-7), 0.1);
-  width: 100%;
+  width: 100vw;
   height: calc(100vh - 60px);
 }
 
@@ -16,6 +16,7 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  overflow-y: hidden;
 
   &::-webkit-scrollbar {
     display: none;
@@ -41,7 +42,6 @@
     position: relative;
     z-index: 2;
     padding: 2rem;
-    max-width: 1200px;
     margin: 0 auto;
 
     @media (max-width: 768px) {

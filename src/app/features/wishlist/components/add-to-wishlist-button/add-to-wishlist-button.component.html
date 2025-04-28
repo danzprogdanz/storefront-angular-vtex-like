@@ -1,0 +1,7 @@
+<button
+  class="wishlist-button"
+  (click)="toggleWishlist()"
+  [class.active]="isInWishlist"
+>
+  <span class="icon">{{ isInWishlist ? '❤️' : '🤍' }}</span>
+</button>
