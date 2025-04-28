@@ -1,59 +1,100 @@
-# StorefrontAngularVtexLike
+# 🍕 Angular VTEX-like Food Delivery Store
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+*A food delivery storefront inspired by VTEX workflow*
 
-## Development server
+## 🏁 Overview
 
-To start a local development server, run:
+This project is an Angular-based food delivery platform that simulates key VTEX e-commerce workflows. Currently in active development, it aims to provide a modern, scalable foundation for food delivery applications with rich features and mock API integration.
 
-```bash
-ng serve
+## ✨ Features (Planned/In Progress)
+
+- **VTEX-like Workflow**: Simulating core VTEX e-commerce patterns
+- **Modern UI/UX**: Responsive design with SCSS and design system
+- **Interactive Catalog**: Food browsing with categories and filters
+- **Shopping Cart**: Full cart functionality with NgRx state management
+- **Mock API Service**: MSW for API simulation during development
+- **Authentication Flow**: Login/register with mock auth
+- **Performance Optimized**: Angular best practices for speed
+- **Type Safety**: Full TypeScript support
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Angular](https://angular.io/) (v19+)
+- **Styling**: SCSS with Design System
+- **State Management**: NgRx
+- **API Mocking**: MSW (Mock Service Worker)
+- **Type Checking**: TypeScript
+- **Linting**: ESLint
+- **Testing**: Jasmine/Karma (Coming soon)
+
+## 🏗️ Project Structure
+
+```
+storefront-angular-vtex-like/
+├── src/
+│   ├── app/
+│   │   ├── features/          # Feature modules (auth, cart, catalog)
+│   │   ├── core/             # Core services and interceptors
+│   │   ├── mocks/            # MSW mock handlers and models
+│   │   ├── shared/           # Shared components and store
+│   │   └── styles/           # Design system (SCSS variables, mixins)
+├── public/                   # Static assets
+└── angular.json              # Angular configuration
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🚀 Getting Started
 
-## Code scaffolding
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm (v9+ recommended)
+- Angular CLI (v19+)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/storefront-angular-vtex-like.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm start
+   ```
 
-```bash
-ng generate component component-name
-```
+### Available Scripts
+- `npm start`: Starts the development server
+- `npm run build`: Creates a production build
+- `npm run watch`: Development build with watch mode
+- `npm test`: Runs tests (Coming soon)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧩 Component Architecture
 
-```bash
-ng generate --help
-```
+The project follows Atomic Design principles:
 
-## Building
+- **Atoms**: Basic UI elements (Buttons, Inputs, Typography)
+- **Molecules**: Simple component groups
+- **Organisms**: Complex UI sections (HeroCarousel)
+- **Features**: Complete business feature modules
+- **Pages**: Route components
 
-To build the project run:
+## 📦 State Management
 
-```bash
-ng build
-```
+NgRx powers the application state with:
+- Root store configuration
+- Feature states for cart, auth, etc.
+- Actions, reducers, and effects
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## � Design System
 
-## Running unit tests
+Key design elements:
+- SCSS variables for colors, typography, spacing
+- Responsive mixins and breakpoints
+- Component-scoped styles with BEM-like naming
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🤝 Contributing
 
-```bash
-ng test
-```
+This project is currently in active development. Contributions will be welcome once the core architecture is stabilized. Check back soon!
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
