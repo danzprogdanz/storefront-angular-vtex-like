@@ -1,0 +1,54 @@
+<article class="product-card">
+  <div class="image-container">
+    <img
+      [src]="product.images[0].url"
+      [alt]="product.images[0].altText"
+      class="product-image"
+    />
+    @if (product.price.discountPercentage) {
+      <span class="discount-badge">
+        -{{ product.price.discountPercentage }}%
+      </span>
+    }
+  </div>
+
+  <div class="content">
+    <div class="title-container">
+      <h3 class="title" [class.expanded]="expanded">
+        <a
+          [routerLink]="['/product', product.slug]"
+        >
+          {{ product.title }}
+        </a>
+      </h3>
+      @if (product.title.length > 50) {
+        <button
+          (click)="toggleTitle()"
+          class="toggle-button"
+        >
+          {{ expanded ? 'Show Less' : 'Show More' }}
+        </button>
+      }
+    </div>
+
+    <div class="price-container">
+      @if (product.price.originalAmount) {
+        <span class="original-price">
+          {{ product.price.currency }}{{ getOriginalPrice() }}
+        </span>
+      }
+      <span class="current-price">{{ product.price.formatted }}</span>
+    </div>
+
+    <div class="buttons-wrapper">
+      <app-add-to-cart-button
+        [product]="product"
+        (added)="handleAddToCart($event)"
+      ></app-add-to-cart-button>
+      <app-add-to-wishlist-button
+        [product]="product"
+        (added)="handleAddToWishlist($event)"
+      ></app-add-to-wishlist-button>
+    </div>
+  </div>
+</article>
