@@ -45,3 +45,11 @@
   --signal-2: #9e2b26;
   --signal-3: #3c6e71;
 }
+
+body {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

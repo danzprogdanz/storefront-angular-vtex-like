@@ -3,8 +3,8 @@
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(var(--natural-7), 0.1);
-  width: 100%;
-  height: calc(100vh - 60px);
+  width: 100vw;
+  height: calc(100vh - 80px);
 }
 
 .carousel-container {
@@ -16,6 +16,7 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  overflow-y: hidden;
 
   &::-webkit-scrollbar {
     display: none;
