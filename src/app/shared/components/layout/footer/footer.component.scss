@@ -1,0 +1,133 @@
+.footer {
+  background-color: var(--natural-7);
+  color: var(--stone-1);
+  padding: 3rem 0 0;
+  font-family: inherit;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  &__section {
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    color: var(--natural-0);
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+  }
+
+  &__text {
+    color: var(--stone-2);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__link {
+    color: var(--stone-2);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--natural-0);
+    }
+  }
+
+  &__contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      color: var(--stone-2);
+
+      .icon {
+        margin-right: 0.5rem;
+        color: var(--natural-3);
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+
+    &-link {
+      color: var(--stone-1);
+      font-size: 1.25rem;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--natural-0);
+      }
+    }
+  }
+
+  &__bottom {
+    background-color: var(--natural-6);
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  &__copyright {
+    color: var(--stone-2);
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+  }
+
+  &__legal {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    &-link {
+      color: var(--stone-2);
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--natural-0);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    &__content {
+      padding: 0 2rem;
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+    }
+
+    &__copyright {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px); /* Fixed width */
+  gap: 1.5rem;
+  padding: 1rem;
+  margin: 4rem auto;
+  width: 90%;
+  max-width: 1400px;
+  justify-content: center; /* Center the columns */
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, 240px);
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0.5rem;
+  }
+}
+
