@@ -5,6 +5,7 @@ import { CartItem } from './state/cart.types';
 import { selectCartItems, selectCartTotal } from './state/cart.selectors';
 import * as CartActions from './state/cart.actions';
 import { AsyncPipe, CurrencyPipe } from '@angular/common';
+import { Product } from '../../shared/types/product.types';
 
 @Component({
   selector: 'app-cart',
@@ -20,13 +21,11 @@ export class CartComponent {
   constructor(private store: Store) {
     this.items$ = this.store.select(selectCartItems);
     this.total$ = this.store.select(selectCartTotal);
+  }
 
-    this.store.subscribe(state => console.log('Current state:', state));
-
-    // Or for specific state
-    this.store.select(selectCartItems).subscribe(items =>
-      console.log('Cart items:', items)
-    );
+  getVariantName(product: Product, skuCode: string): string {
+    const variant = product.inventory.skus?.find(sku => sku.code === skuCode);
+    return variant ? `${variant.size || ''} ${variant.color || ''}`.trim() : '';
   }
 
   removeItem(productId: string) {
@@ -34,12 +33,13 @@ export class CartComponent {
   }
 
   updateQuantity(productId: string, quantity: number) {
-    // Ensure quantity doesn't go below 1
     const newQuantity = Math.max(1, quantity);
     this.store.dispatch(CartActions.updateCartItemQuantity({ productId, quantity: newQuantity }));
   }
 
   clearCart() {
-    this.store.dispatch(CartActions.clearCart());
+    if (confirm('Are you sure you want to clear your cart?')) {
+      this.store.dispatch(CartActions.clearCart());
+    }
   }
 }

@@ -1,5 +1,13 @@
-<button class="cart-button" (click)="addToCart()">
-  <span class="text">
-    Add to Cart
+<ng-container *ngIf="isInCart$ | async; else addButton">
+  <span class="already-in-cart">
+    Already in cart
   </span>
-</button>
+</ng-container>
+
+<ng-template #addButton>
+  <button class="cart-button" (click)="addToCart()">
+    <span class="text">
+      Add to Cart
+    </span>
+  </button>
+</ng-template>

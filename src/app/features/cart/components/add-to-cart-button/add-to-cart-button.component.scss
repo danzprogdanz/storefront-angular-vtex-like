@@ -55,3 +55,13 @@
     transform: translateX(2px);
   }
 }
+
+.already-in-cart {
+  display: inline-block;
+  padding: 10px 16px;
+  color: #666;
+  font-size: 14px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
