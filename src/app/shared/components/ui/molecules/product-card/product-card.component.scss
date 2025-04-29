@@ -120,13 +120,12 @@
 
     .buttons-wrapper {
       display: flex;
-      gap: 8px;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
       margin-top: auto;
 
-      app-add-to-cart-button,
-      app-add-to-wishlist-button {
-        flex: 1;
-      }
     }
   }
 }
