@@ -4,6 +4,8 @@
   </div>
 
   <div class="navbar-links">
-
+    <a routerLink="/cart" class="cart-link">
+      🛒 Cart (<span>{{ cartQuantity$ | async }}</span>)
+    </a>
   </div>
 </nav>
