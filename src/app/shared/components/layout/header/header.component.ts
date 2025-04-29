@@ -1,7 +1,8 @@
-// shared/components/layout/header/header.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { Observable, map } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +12,12 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  // Add your header logic here
+  cartQuantity$: Observable<number>;
+
+  constructor(private store: Store<{ cart: { items: { quantity: number }[] } }>) {
+    // Sum up the quantity of all cart items
+    this.cartQuantity$ = this.store.select(state => state.cart.items).pipe(
+      map(items => items.reduce((total, item) => total + item.quantity, 0))
+    );
+  }
 }
