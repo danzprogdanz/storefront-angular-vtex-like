@@ -1,5 +1,3 @@
-## Updated README: Angular VTEX-like Food Delivery Store
-
 # 🍕 Angular VTEX-like Food Delivery Store
 
 *A food delivery storefront inspired by VTEX workflow*
